@@ -31,13 +31,13 @@ def create_world(): # 초기의 세계를 만든다.
     running = True
 
     grass2 = Grass2()
-    game_world.add_object(grass2, 0)
+    game_world.add_object(grass2, 2)
 
     boy = Boy()  # 소년 객체 추가.
     game_world.add_object(boy, 1) # 레이어 추가
 
     grass = Grass()  # grass 객체 추가.
-    game_world.add_object(grass, 1) # 맨뒤 레이어
+    game_world.add_object(grass, 0) # 맨뒤 레이어
 
 
 
