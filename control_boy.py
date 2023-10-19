@@ -1,7 +1,7 @@
 from pico2d import *
 
 import game_world
-from grass import Grass
+from grass import Grass, Grass2
 from boy import Boy
 
 
@@ -24,16 +24,21 @@ def handle_events():
 def create_world(): # 초기의 세계를 만든다.
     global running
     global grass
+    global grass2
     global team
     global boy
 
     running = True
 
+    grass2 = Grass2()
+    game_world.add_object(grass2, 0)
+
     boy = Boy()  # 소년 객체 추가.
     game_world.add_object(boy, 1) # 레이어 추가
 
     grass = Grass()  # grass 객체 추가.
-    game_world.add_object(grass, 0) # 맨뒤 레이어
+    game_world.add_object(grass, 1) # 맨뒤 레이어
+
 
 
 
@@ -49,6 +54,7 @@ def render_world():
 
 open_canvas()
 create_world()
+
 # game loop
 while running:
     handle_events()

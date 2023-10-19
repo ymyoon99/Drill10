@@ -2,7 +2,7 @@
 
 # 게임 월드의 표현
 # 두개의 layer를 갖는 게임월드로 구현
-objects = [ [], [] ] # [object], [layer]
+objects = [ [], [], [] ] # [object], [layer]
 
 
 # 월드에 객체를 넣는 함수
@@ -22,6 +22,7 @@ def render():
     for layer in objects:  # 오브젝트의 레이어를 업데이트
         for o in layer:
             o.draw()
+
 
 # 객체 삭제
 def remove_object(o):
