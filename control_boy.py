@@ -21,7 +21,7 @@ def handle_events():
             boy.handle_event(event)
 
 
-def create_world(): # 초기의 세계를 만든다.
+def create_world():  # 초기의 세계를 만든다.
     global running
     global grass
     global grass2
@@ -34,12 +34,10 @@ def create_world(): # 초기의 세계를 만든다.
     game_world.add_object(grass2, 2)
 
     boy = Boy()  # 소년 객체 추가.
-    game_world.add_object(boy, 1) # 레이어 추가
+    game_world.add_object(boy, 1)  # 레이어 추가
 
     grass = Grass()  # grass 객체 추가.
-    game_world.add_object(grass, 0) # 맨뒤 레이어
-
-
+    game_world.add_object(grass, 0)  # 맨뒤 레이어
 
 
 def update_world():
